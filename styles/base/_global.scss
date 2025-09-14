@@ -1,0 +1,193 @@
+@use 'theme' as *;
+@use '../components/link' as *;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
+}
+
+/* Hack needed to prevent injected element from affecting our layout https://github.com/vercel/next.js/issues/70675 */
+nextjs-portal {
+  position: absolute;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  color: var(--color-secondary);
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Global button styles */
+button {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed),
+    transform 0.1s ease-in-out;
+
+  &.primary {
+    background: var(--color-primary);
+    color: #000;
+
+    &:hover {
+      background: var(--color-primary-dark);
+      transform: scale(1.05);
+    }
+    &:focus-visible {
+      outline: 3px solid var(--color-primary-focus);
+      outline-offset: 2px;
+    }
+  }
+
+  &.secondary {
+    background: var(--color-secondary);
+    color: #fff;
+
+    &:hover {
+      background: var(--color-secondary-dark);
+      transform: scale(1.05);
+    }
+    &:focus-visible {
+      outline: 3px solid var(--color-secondary-focus);
+      outline-offset: 2px;
+    }
+  }
+
+  &.danger {
+    background: var(--color-danger);
+    color: #fff;
+
+    &:hover {
+      background: var(--color-danger-dark);
+      transform: scale(1.05);
+    }
+    &:focus-visible {
+      outline: 3px solid var(--color-danger-focus);
+      outline-offset: 2px;
+    }
+  }
+  &:disabled {
+    background: var(--color-disabled);
+    cursor: not-allowed;
+  }
+}
+
+input,
+textarea,
+select {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-text-secondary);
+  border-radius: var(--border-radius);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  transition: border-color var(--transition-speed),
+    background-color var(--transition-speed);
+
+  &:focus {
+    border-color: var(--color-primary);
+    outline: none;
+  }
+
+  &:disabled {
+    background: var(--color-disabled);
+    cursor: not-allowed;
+  }
+}
+
+/* Labels */
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+  display: block;
+}
+
+/* Select Dropdown */
+select {
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%231E1E1E' d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 32px;
+}
+
+/* Fieldset & Legend */
+fieldset {
+  border: 1px solid var(--color-text-secondary);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+}
+
+legend {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+/* Checkbox & Radio */
+input[type='checkbox'],
+input[type='radio'] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-text-secondary);
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: border-color var(--transition-speed),
+    background-color var(--transition-speed);
+
+  &:checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}

@@ -1,0 +1,13 @@
+@import 'variables';
+
+.card {
+  background: #fff;
+  border-radius: $border-radius;
+  padding: $spacing-lg;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform $transition-speed;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,28 @@
+.link {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed),
+    transform 0.1s ease-in-out;
+  background: var(--color-secondary);
+  color: #fff;
+
+  &:hover,
+  &:focus-visible {
+    background: var(--color-secondary-dark);
+    transform: scale(1.05);
+  }
+}
+.linkAccent {
+  @extend .link;
+  background-color: var(--color-accent);
+  color: #fff;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-accent-dark);
+  }
+}

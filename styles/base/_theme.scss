@@ -1,0 +1,65 @@
+:root {
+  /* Typography */
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+
+  /* Colors (Light Mode) */
+  --color-primary: #ffc107; /* Gold */
+  --color-secondary: #1e3a8a; /* Deep Blue */
+  --color-primary-focus: #ffd54f; /* lighter gold */
+  --color-secondary-focus: #3357d0; /* lighter royal blue */
+  --color-accent: #00bfa6; /* Teal (light mode) */
+  --color-subtle: #6e6e6e; // still secondary but clearer on light bg
+  --color-danger: #e63946; /* Vibrant Red */
+  --color-danger-focus: #ff6b6b; /* Light red-pink ring that contrasts on soft white */
+  --color-bg: #fafafa; /* Soft White */
+  --color-text-primary: #1e1e1e; /* Deep Charcoal */
+  --color-text-secondary: #4a4a4a; /* Slate Gray */
+  --color-link: #0077ff;
+  --color-disabled: #b0b0b0;
+
+  /* Correct/Wrong Answer Colors */
+  --color-correct: #4caf50;
+  --color-wrong: #f44336;
+
+  /* Spacing & Layout */
+  --spacing-sm: 4px;
+  --spacing-md: 8px;
+  --spacing-lg: 16px;
+  --spacing-xl: 32px;
+  --border-radius: 12px;
+  --transition-speed: 0.3s ease-in-out;
+
+  /* Predefined hover/darker variants for dynamic interactions */
+  --color-primary-dark: #e0a806; /* Precomputed darker shade for primary */
+  --color-secondary-dark: #162d59; /* Precomputed darker shade for secondary */
+  --color-danger-dark: #b3261e;
+  --color-accent-dark: #009e88;
+}
+
+[data-theme='dark'] {
+  /* Colors (Dark Mode) */
+  --color-primary: #00bfff; /* Neon Blue */
+  --color-secondary: #6a0dad; /* Rich Purple */
+  --color-primary-focus: #33d6ff; /* ↑20 % lightness from #00bfff */
+  --color-secondary-focus: #9f66ff; /* ↑20 % lightness from #6a0dad */
+  --color-accent: #00e5c3; /* Neon aqua (dark mode) */
+  --color-subtle: #a6a6a6; // much brighter for contrast over black
+  --color-danger: #cf6679; /* Bright Orange */
+  --color-danger-focus: #ff8a80; /* Lighter neon red (for dark BG) */
+  --color-bg: #121212; /* Dark Charcoal */
+  --color-text-primary: #e0e0e0; /* Soft White */
+  --color-text-secondary: #a0a0a0; /* Cool Gray */
+  --color-link: #00bfff;
+  --color-disabled: #666666;
+
+  /* Correct/Wrong Answer Colors for dark mode */
+  --color-correct: #32cd32;
+  --color-wrong: #b71c1c;
+
+  /* Predefined hover/darker variants for dark mode */
+  --color-primary-dark: #32cd32; /* Adjust as needed */
+  --color-secondary-dark: #4b1f7a; /* Adjust as needed */
+  --color-accent-dark: #00bfa6;
+  --color-danger-dark: #9b3949;
+}
