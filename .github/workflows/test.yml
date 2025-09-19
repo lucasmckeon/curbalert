@@ -10,20 +10,22 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - name: 🧾 Checkout code
         uses: actions/checkout@v4
 
-      - name: 🟢 Use Node.js
+      # Install pnpm first
+      - name: 📦 Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8 # or whatever version you use locally
+
+      - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'pnpm'
-      - name: 📦 Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+
       - name: 📦 Install dependencies
         run: pnpm install
 
